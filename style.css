@@ -1,0 +1,139 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5;
+}
+
+/* Multi Selector */ 
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    color: #1e6db2;
+}
+
+/* Child Selector */
+nav > ul {
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+}
+
+/* Sibling Selector */
+h2 ~ p {
+    color:#1e6db2;
+    margin-top: 10px;
+}
+
+/* Adjecent Sibling Selector */
+h3 + p {
+    color: #f7fbff;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+/* attribute selector */
+a[target="_blank"] {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a[target="_blank"]:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* pseudo-element Selector */
+.story-text::before {
+    content: "💧"
+}
+
+.story-text1::before {
+    content: "🧱"
+}
+
+.story-text2::before {
+    content: "⚫"
+}
+
+.story-text3::before {
+    content: "🌿"
+}
+
+/*-- New Pricing Table using CSS Grid --*/
+.pricing-table {
+    display: grid;
+    grid-template-columns: 1fr; /* One equal columns */
+    gap: 20px; /* Space between cells */
+    width: 75%;
+    margin: 0 auto; /* Center the table */
+    background-color: #f0f6ff;
+    border: 1px solid #000;
+}
+
+.quote-form {
+    display: grid;
+    grid-template-columns: 1fr; /* One equal columns */
+    gap: 20px; /* Space between cells */
+    width: 75%;
+    margin: 0 auto; /* Center the table */
+    background-color: #f0f6ff;
+    border: 1px solid #000;
+}
+
+/* New Flexbox for Contact Page */
+/* Main Container */
+.contact-container {
+    background-color: #f0f6ff;
+    padding: 40px;
+}
+
+/* Header Section */
+.contact-header {
+    text-align: center;
+    color: #1e6db2;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+/* Contact Info Section */
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #1e6db2;
+    flex: 1; /* Each member takes equal space */
+    text-align: center;
+    color: #1e6db2;
+    font-size: 18px;
+}
+
+/* Make Each Page Skale With Screen */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    body {
+        font-size: 13px;
+    }
+}

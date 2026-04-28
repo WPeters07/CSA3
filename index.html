@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SPX Power Washing</title>
+        <link rel="icon" type="image/png" href="Assets/Images/Logo.png">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <!--Global header, Logo, Nav, and CTA--> 
+        <table width="100%" bgcolor="#1e6db2" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="left">
+                    <a href="index.html">
+                        <img src="Assets/Images/Logo.png" alt="SPX Power Washing Logo" width="200" height="150">
+                    </a>
+                </td>
+                <td align="center">
+                    <nav>
+                        <ul>
+                            <a href="index.html"><font size="6" color="white">Home</font></a>
+                            &nbsp;|&nbsp; <!--Non-breaking space for spacing-->
+                            <a href="about.html"><font size="6" color="white">About us</font></a>
+                            &nbsp;|&nbsp;
+                            <a href="gallery.html"><font size="6" color="white">Gallery</font></a>
+                            &nbsp;|&nbsp;
+                            <a href="pricing.html"><font size="6" color="white">Pricing</font></a>
+                            &nbsp;|&nbsp;
+                            <a href="contact.html"><font size="6" color="white">Contact</font></a>
+                        </ul>
+                    </nav>
+                </td>
+                <td align="right">
+                    <a href="quote.html"><font size="6"color="white">Book Free Quote Now!</font></a>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <!--Main content per page--> 
+        <!--Hero Section-->
+        <table width="100%" bgcolor="f0f6ff" align="center" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td align="center"> 
+                        <h1 style="padding-top: 15px"><font size="7" color="#1e6db2">Welcome to SPX Power Washing!</font></h1><br>
+                        <p style="padding-left: 25px; padding-bottom: 20px;"><font size="5" color="#1e6db2"> We are a professional power washing company dedicated to providing top-notch cleaning services for residential and commercial properties. With our state of the art equipment and experienced team, we can tackle even the toughest dirt and grime, leaving your surfaces looking fresh and revitalized.</p>
+                        <p style="padding-left: 25px; padding-bottom: 20px;"><font size="5" color="#1e6db2">At SPX Power Washing, we understand the importance of maintaining the appearance and integrity of your property. Our services include driveway cleaning, patio cleaning, deck cleaning, siding cleaning, and more. We use eco-friendly cleaning solutions that are safe for your family, pets, and the environment.</font></p>
+                        <p style="padding-left: 25px; padding-bottom: 20px;"><font size="5" color="#1e6db2">Whether you need a one-time deep clean or regular maintenance, SPX Power Washing is here to help. Contact us today to schedule your free quote and experience the difference of professional power washing!</font></p>
+                    </td>
+                    <td align="center" width="40%" valign="center">
+                        <!--Carousel container-->
+                        <div id="carousel" style="position: relative; width: 600px; height: 350px; overflow: hidden;">
+                            <img class="slide" src="Assets/Images/Interlock (powerwashing).png" style="width:600px; height:350px; object-fit:cover; display:none;">
+                            <img class="slide" src="Assets/Images/Hero 1 .png" style="width:200px; height:350px; display:none;">
+                            <img class="slide" src="Assets/Images/Hero 2.png" style="width:600px; height:350px; object-fit:cover; display:none;">
+                            <img class="slide" src="Assets/Images/Logo.png" style="width:500px; height:350px; object-fit:cover; display:none;">
+                            <!--Left arrow button-->
+                            <button onclick="changeSlide(-1)" style="position:absolute; top:50%; left:5px; transform:translateY(-50%); background:#1e6db2; color:white; border:none; font-size:20px; padding:8px 12px; cursor:pointer;">&#8249;</button>
+
+                            <!--Right arrow button-->
+                            <button onclick="changeSlide(1)" style="position:absolute; top:50%; right:5px; transform:translateY(-50%); background:#1e6db2; color:white; border:none; font-size:20px; padding:8px 12px; cursor:pointer;">&#8250;</button>
+
+                            <!--Dot indicators-->
+                            <div style="position:absolute; bottom:8px; width:100%; text-align:center;">
+                                <span class="dot" onclick="goToSlide(0)" style="display:inline-block; width:10px; height:10px; margin:0 4px; background:white; border-radius:50%; cursor:pointer; opacity:0.5;"></span>
+                                <span class="dot" onclick="goToSlide(1)" style="display:inline-block; width:10px; height:10px; margin:0 4px; background:white; border-radius:50%; cursor:pointer; opacity:0.5;"></span>
+                                <span class="dot" onclick="goToSlide(2)" style="display:inline-block; width:10px; height:10px; margin:0 4px; background:white; border-radius:50%; cursor:pointer; opacity:0.5;"></span>
+                                <span class="dot" onclick="goToSlide(3)" style="display:inline-block; width:10px; height:10px; margin:0 4px; background:white; border-radius:50%; cursor:pointer; opacity:0.5;"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+        </table>
+
+        <br>
+        <!--Services section-->
+        <table width="100%" align="center" bgcolor="#f0f6ff" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="center" colspan="4">
+                        <h1><font size="7" color="#1e6db2">Our Services</font></h1>
+                    </td>
+                </tr>
+                <tr >
+                    <td style="padding-top: 20px; padding-bottom: 20px;" align="center" width="25%">
+                        <font class="story-text" size="6" color="#1e6db2"><b>Power Washing</b></font><br>
+                        <font size="4" color="#1e6db2">Our power washing service removes dirt, grime, and stains from various surfaces including driveways, patios, decks, siding, and more.</font><br>
+                        <a href="gallery.html"><font size="4" color="#1e6db2">View Gallery! </font></a>
+                    </td>
+                    <td style="padding-top: 20px; padding-bottom: 20px;" align="center" width="25%">
+                         <font class="story-text1"size="6" color="#1e6db2"><b>Interlock</b></font><br>
+                        <font size="4" color="#1e6db2">Our Interlock service includes the cleaning and repleacing of concrete fillement between interlock bricks, which helps maintain the stability, appearance, and longevity  of your interlock surfaces.</font><br>
+                        <a href="gallery.html"><font size="4" color="#1e6db2">View Gallery! </font></a>
+                    </td>
+                    <td  style="padding-top: 20px; padding-bottom: 20px;" align="center" width="25%">
+                        <font class="story-text2" size="6" color="#1e6db2"><b>Sealant</b></font><br>
+                        <font size="4" color="#1e6db2">Our sealant service protects your surfaces from weather damage and stains, extending their lifespan and maintaining their appearance.</font><br>
+                        <a href="gallery.html"><font size="4" color="#1e6db2">View Gallery! </font></a>
+                    </td>
+                    <td  style="padding-top: 20px; padding-bottom: 20px;" align="center" width="25%">
+                        <font class="story-text3" size="6" color="#1e6db2"><b>Landscaping</b></font><br>
+                        <font size="4" color="#1e6db2">Our landscaping service includes mowing lawns, cleaning gutters, hedge trimming to anything and everything to ensure you have your outdoor spaces looking there best year-round.</font><br>
+                        <a href="gallery.html"><font size="4" color="#1e6db2">View Gallery! </font></a>
+                    </td>
+                </tr>
+
+        </table>
+        <br>
+        <table width="100%" align="center" bgcolor="#f0f6ff" cellpadding="10" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <h1><font size="7" color="#1e6db2">Customer Testimonials</font></h1>
+                    <p><font size="5" color="#1e6db2">Hear the difference SPX Power Washing has made in our customers' outdoor spaces!</font></p>
+                    <audio controls>
+                        <source src="Assets/Audio/SPX recommendation.mp3" type="audio/mpeg">
+                </td>
+            </tr>
+        </table><br>
+        
+        <table width="100%" align="center" bgcolor="#f0f6ff" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td align="center">
+                        <h1><font size="7" color="#1e6db2">Book Your Free Quote Today!</font></h1>
+                        <a href="quote.html"><font size="5" color="#1e6db2">Click here to schedule your free quote and experience the difference of professional power washing!</font></a>
+                    </td>
+                </tr>
+        </table>
+
+    </body> 
+
+        <!--Footer-->
+        <table width="100%" bgcolor="#1e6db2" cellpadding="10" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <p><font size="4" color="white">Contact us: SPXPowerWashing@Gmail.com </font></p>
+                </td>
+                <td align="center">
+                    <a href="https://www.facebook.com/profile.php?id=61576810232960" target="_blank"><font size="4" color="white">Follow us on Facebook</font></a>
+                    &nbsp;|&nbsp;
+                    <a href="https://www.instagram.com/spxpowerwashing/" target="_blank"><font size="4" color="white">Follow us on Instagram</font></a> </font><p>
+                </td>
+                <td align="center">
+                <p><font size="4" color="white">&copy; 2025 SPX Power Washing</font></p>
+            </tr>
+        </table>
+
+            <script>
+                //Track which slide is showing
+                var currentSlide = 0;
+                //Grab all slide images and dot indicators
+                var slides = document.querySelectorAll(".slide");
+                var dots   = document.querySelectorAll(".dot");
+                //Show the first slide and highlight its dot on page load
+                updateCarousel();
+                //Event handler: arrow buttons 
+                function changeSlide(direction) {
+                currentSlide = currentSlide + direction;
+                    //Conditional: wrap around if we go past the end
+                    if (currentSlide >= slides.length) {
+                        currentSlide = 0; //loop back to first
+                    }
+                    if (currentSlide < 0) {
+                        currentSlide = slides.length - 1; //loop to last
+                    }
+                   updateCarousel();
+                }
+                //Event handler: dot indicators call this to jump slides
+                function goToSlide(index) {
+                    currentSlide = index;
+                    updateCarousel();
+                }
+                //Show the current slide, hide all others, update dot highlights
+                function updateCarousel() {
+                    for (var i = 0; i < slides.length; i++) {
+                        //Conditional: show only the current slide, hide the rest
+                        if (i === currentSlide) {
+                            slides[i].style.display = "block";
+                            dots[i].style.opacity   = "1";
+                        } 
+                        else {
+                            slides[i].style.display = "none";
+                            dots[i].style.opacity   = "0.5";
+                        }
+                    }
+                }
+
+            </script>
+</html>

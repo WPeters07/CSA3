@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SPX Power Washing</title>
+        <link rel="icon" type="image/png" href="Assets/Images/Logo.png">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <!--Global header, Logo, Nav, and CTA--> 
+        <table width="100%" bgcolor="#1e6db2" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <a href="index.html">
+                        <img src="Assets/Images/Logo.png" alt="SPX Power Washing Logo" width="200" height="150">
+                    </a>
+                </td>
+                <td align="center">
+                    <nav>
+                        <a href="index.html"><font size="6" color="white">Home</font></a>
+                        &nbsp;|&nbsp; <!-- Non-breaking space for spacing -->
+                        <a href="about.html"><font size="6" color="white">About us</font></a>
+                            &nbsp;|&nbsp;
+                        <a href="gallery.html"><font size="6" color="white">Gallery</font></a> 
+                            &nbsp;|&nbsp;
+                        <a href="pricing.html"><font size="6" color="white">Pricing</font></a> 
+                            &nbsp;|&nbsp;
+                        <a href="contact.html"><font size="6" color="white">Contact</font></a> 
+                    </nav>
+                </td>
+                <td align="right">
+                    <a href="quote.html"><font size="6"color="white">Book Free Quote Now!</font></a>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <!--Main content per page-->
+        <table width="100%" align="center" bgcolor="#f0f6ff" cellpadding="10" cellspacing="0">
+            <tr align="center">
+                <td align="center" colspan="2">
+                    <h1><font size="7" color="#1e6db2">Book a Free Quote Today!</font></h1>
+                    <p><font size="5" color="#1e6db2">Thank you for your interest in SPX Power Washing! Please fill out the form below with your contact information and details about the work you are looking to have done. One of our employees will get back to you within <b>a few business days</b> to set up a convenient time for your free on-site quote. We look forward to working with you!</font></p>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Quote form header-->
+        <table class="quote-form" width="70%" align="center" bgcolor="#f0f6ff" border="1" cellpadding="10" cellspacing="0">
+            <tr bgcolor="#1e6db2" align="center">
+                <td colspan="2" align="center" cellpadding="10">
+                    <h1><font size="5" color="white">Quote Request Form</font></h1>
+                </td>
+            </tr>
+        <!--Quote form-->
+            <tr bgcolor="#f0f6ff" align="center">
+                <td align="center" width="50%">
+                    <form id="quoteForm">
+                        <table width="50%" cellpadding="5" cellspacing="0">
+                            <tr align="center">
+                                <td align="center"><font size="5" color="#1e6db2">Name:</font></td>
+                                <td align="center"><input type="text" id="name" name="name"></td>
+                            </tr>
+                            <tr align="center">
+                                <td align="center"><font size="5" color="#1e6db2">Email:</font></td>
+                                <td align="center"><input type="email" id="email" name="email"></td>
+                            </tr>
+                            <tr align="center">
+                                <td align="center"><font size="5" color="#1e6db2">Phone Number:</font></td>
+                                <td align="center"><input type="tel" id="phone" name="phone"></td>
+                            </tr>
+                            <tr align="center">
+                                <td align="center"><font size="5" color="#1e6db2">Address:</font></td>
+                                <td align="center"><input type="text" id="address" name="address"></td>
+                            </tr>
+                            <tr align="center">
+                                <td align="center"><font size="5" color="#1e6db2">Details about the work you are looking to have done:</font></td>
+                                <td align="center"><textarea id="details" name="details" rows="4" cols="30"></textarea></td>
+                            </tr>
+                            <!--Submit button-->
+                            <tr>
+                                <td colspan="2" align="center" cellpadding="20">
+                                    <input type="submit" value="Submit Quote Request">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </body>  
+
+        <!--Footer-->
+        <table width="100%" bgcolor="#1e6db2" cellpadding="10" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <p><font size="4" color="white">Contact us: SPXPowerWashing@Gmail.com </font></p>
+                </td>
+                <td align="center">
+                    <a href="https://www.facebook.com/profile.php?id=61576810232960" target="_blank"><font size="4" color="white">Follow us on Facebook</font></a>
+                    &nbsp;|&nbsp;
+                    <a href="https://www.instagram.com/spxpowerwashing/" target="_blank"><font size="4" color="white">Follow us on Instagram</font></a> </font><p>
+                </td>
+                <td align="center">
+                <p><font size="4" color="white">&copy; 2025 SPX Power Washing</font></p>
+            </tr>
+
+            <!--JS quote form script-->
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+            <script>
+                emailjs.init("tFk9FAPRU0YXUHa6E");
+                //Event handler: listens for the submit button being clicked
+                document.getElementById("quoteForm").addEventListener("submit", function(event) {
+                event.preventDefault();// Prevent page from refreshing on submit
+                    //Grab the value from each input field
+                    var name    = document.getElementById("name").value.trim();
+                    var email   = document.getElementById("email").value.trim();
+                    var phone   = document.getElementById("phone").value.trim();
+                    var address = document.getElementById("address").value.trim();
+                    var details = document.getElementById("details").value.trim();
+                    //Conditional: if any field is empty, notify the user and stop submission
+                    if (!name || !email || !phone || !address || !details) {
+                        alert("Please fill out all fields before submitting your quote request.");
+                        return; // Stop here — do not send email
+                    }
+                    //Build emailjs template
+                    var templateParams = {
+                        from_name:    name,
+                        from_email:   email,
+                        from_phone:   phone,
+                        from_address: address,
+                        message:      details
+                    };
+                    //Send the email using EmailJS
+                    emailjs.send("service_6ep8l3h", "template_2jj1u3j", templateParams)
+                        .then(function(response) {
+                            // Notification: email sent successfully
+                            alert("Your quote request has been sent! We will get back to you within a few business days.");
+                        }, function(error) {
+                            // Notification: something went wrong
+                            alert("Something went wrong. Please try again or email us directly at spxpowerwashing@gmail.com");
+                        });
+                });
+            </script>
+</html>
